@@ -15,30 +15,60 @@
 
     .experience-card {
       border: 1px solid #e0e0e0;
-      padding: 1.5rem;
       border-radius: 12px;
       transition: all 0.3s ease;
       cursor: pointer;
       background: #fafafa;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
       position: relative;
+      overflow: hidden;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .experience-card:hover {
-      background: #f0f8ff;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    .experience-card img {
+      max-height: 50px;
+      max-width: 80%;
+    }
+
+    .experience-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.95);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .experience-card:hover .experience-overlay {
+      opacity: 1;
     }
 
     .experience-card.active {
+      height: auto;
       background: #fff;
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
       z-index: 2;
+      display: block;
+    }
+
+    .experience-card.active .experience-overlay {
+      opacity: 1;
+      background: #ffffff;
+      position: relative;
     }
 
     .experience-details {
       display: none;
-      margin-top: 1rem;
       font-size: 0.95rem;
+      padding: 1rem;
     }
 
     .experience-card.active .experience-details {
@@ -59,8 +89,11 @@
     <h1>Experience</h1>
     <div class="experience-grid">
       <div class="experience-card" onclick="toggleCard(this)">
-        <h2>Agilysys</h2>
-        <p>Director of Strategy (2022–2024)</p>
+        <img src="logos/agilysys.png" alt="Agilysys Logo">
+        <div class="experience-overlay">
+          <h2>Agilysys</h2>
+          <p>Director of Strategy and Corporate Development<br>Feb 2022 – Mar 2025</p>
+        </div>
         <div class="experience-details">
           <p><strong>Overview:</strong> Leading hospitality software provider.</p>
           <ul>
@@ -71,10 +104,13 @@
       </div>
 
       <div class="experience-card" onclick="toggleCard(this)">
-        <h2>FLEETCOR</h2>
-        <p>Director of Strategic Initiatives (2020–2022)</p>
+        <img src="logos/corpay.png" alt="Corpay Logo">
+        <div class="experience-overlay">
+          <h2>Corpay (NYSE: CPAY)</h2>
+          <p>Director of Strategic Initiatives<br>Jan 2020 – Feb 2022</p>
+        </div>
         <div class="experience-details">
-          <p><strong>Overview:</strong> Global B2B payments company, Lodging Division.</p>
+          <p><strong>Overview:</strong> Global B2B payments company, Lodging Division (formerly FLEETCOR).</p>
           <ul>
             <li>Built 3- and 5-year growth plans across departments.</li>
             <li>Led $2M pricing engine initiative; added Air & Car product partnerships.</li>
@@ -84,8 +120,11 @@
       </div>
 
       <div class="experience-card" onclick="toggleCard(this)">
-        <h2>Harris Williams</h2>
-        <p>Associate, M&A (2018–2019)</p>
+        <img src="logos/harriswilliams.png" alt="Harris Williams Logo">
+        <div class="experience-overlay">
+          <h2>Harris Williams</h2>
+          <p>Associate, M&A<br>Jun 2018 – Aug 2019</p>
+        </div>
         <div class="experience-details">
           <p><strong>Overview:</strong> Middle-market investment bank.</p>
           <ul>
@@ -96,8 +135,11 @@
       </div>
 
       <div class="experience-card" onclick="toggleCard(this)">
-        <h2>KeyBanc Capital Markets</h2>
-        <p>Associate, M&A (2017–2018)</p>
+        <img src="logos/keybanc.png" alt="KeyBanc Logo">
+        <div class="experience-overlay">
+          <h2>KeyBanc Capital Markets</h2>
+          <p>Associate, M&A<br>Jun 2017 – Jun 2018</p>
+        </div>
         <div class="experience-details">
           <p><strong>Overview:</strong> Full-service investment bank for mid-market deals.</p>
           <ul>
@@ -108,8 +150,11 @@
       </div>
 
       <div class="experience-card" onclick="toggleCard(this)">
-        <h2>3P Equity Partners</h2>
-        <p>Senior Analyst (2013–2015)</p>
+        <img src="logos/3p.png" alt="3P Equity Partners Logo">
+        <div class="experience-overlay">
+          <h2>3P Equity Partners</h2>
+          <p>Senior Analyst<br>Nov 2013 – Jun 2015</p>
+        </div>
         <div class="experience-details">
           <p><strong>Overview:</strong> PE firm focused on lower-middle market manufacturing.</p>
           <ul>
@@ -120,8 +165,11 @@
       </div>
 
       <div class="experience-card" onclick="toggleCard(this)">
-        <h2>PwC</h2>
-        <p>Assurance Associate (2012–2013)</p>
+        <img src="logos/pwc.png" alt="PwC Logo">
+        <div class="experience-overlay">
+          <h2>PwC</h2>
+          <p>Assurance Associate<br>Jan 2012 – Oct 2013</p>
+        </div>
         <div class="experience-details">
           <p><strong>Overview:</strong> Big Four audit work with tech clients (incl. Twitter).</p>
           <ul>
@@ -132,8 +180,11 @@
       </div>
 
       <div class="experience-card" onclick="toggleCard(this)">
-        <h2>Missionary Service</h2>
-        <p>Volunteer | Brazil São Paulo North (2006–2008)</p>
+        <img src="logos/mission.png" alt="Mission Icon">
+        <div class="experience-overlay">
+          <h2>Missionary Service</h2>
+          <p>Volunteer | Brazil São Paulo North<br>2006 – 2008</p>
+        </div>
         <div class="experience-details">
           <p><strong>Overview:</strong> Two-year cross-cultural service mission.</p>
           <ul>
