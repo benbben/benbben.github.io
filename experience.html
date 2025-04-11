@@ -5,6 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Experience - Ben Benson</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem 0;
+    }
+
+    .experience-card {
+      border: 1px solid #e0e0e0;
+      padding: 1.5rem;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      background: #fafafa;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      position: relative;
+    }
+
+    .experience-card:hover {
+      background: #f0f8ff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .experience-card.active {
+      background: #fff;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      z-index: 2;
+    }
+
+    .experience-details {
+      display: none;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .experience-card.active .experience-details {
+      display: block;
+    }
+  </style>
 </head>
 <body>
   <header><nav><ul>
@@ -14,97 +54,112 @@
     <li><a href="resume.html">Resume</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul></nav></header>
+
   <main>
     <h1>Experience</h1>
+    <div class="experience-grid">
+      <div class="experience-card" onclick="toggleCard(this)">
+        <h2>Agilysys</h2>
+        <p>Director of Strategy (2022–2024)</p>
+        <div class="experience-details">
+          <p><strong>Overview:</strong> Leading hospitality software provider.</p>
+          <ul>
+            <li>Refined go-to-market strategy, segmented TAM, aligned vertical focus.</li>
+            <li>Presented M&A strategy to Board; built acquisition models.</li>
+          </ul>
+        </div>
+      </div>
 
-    <section>
-      <h2>Agilysys (NASDAQ: AGYS)</h2>
-      <h3>Director of Strategy | Feb 2022 – Mar 2025</h3>
-      <p><strong>Company Overview:</strong> Agilysys is a leading hospitality-focused software company providing end-to-end property management, point-of-sale, and guest engagement solutions for hotels, resorts, and casinos.</p>
-      <ul>
-        <li>Partnered with executive leadership to refine go-to-market strategy, segment TAM, and realign vertical focus.</li>
-        <li>Developed and presented M&A strategy to the Board, incorporating competitive dynamics and internal capabilities.</li>
-        <li>Built valuation and synergy models for acquisition targets; led cross-functional diligence teams.</li>
-        <li>Collaborated closely with Joe, President of the Hospitality segment, to drive CRM hygiene, improve territory planning, and optimize sales execution workflows.</li>
-      </ul>
-    </section>
+      <div class="experience-card" onclick="toggleCard(this)">
+        <h2>FLEETCOR</h2>
+        <p>Director of Strategic Initiatives (2020–2022)</p>
+        <div class="experience-details">
+          <p><strong>Overview:</strong> Global B2B payments company, Lodging Division.</p>
+          <ul>
+            <li>Built 3- and 5-year growth plans across departments.</li>
+            <li>Led $2M pricing engine initiative; added Air & Car product partnerships.</li>
+            <li>Interim pricing lead; implemented revenue-positive changes.</li>
+          </ul>
+        </div>
+      </div>
 
-    <section>
-      <h2>FLEETCOR Technologies (NYSE: FLT)</h2>
-      <h3>Director of Strategic Initiatives – Lodging Division | Jan 2020 – Feb 2022</h3>
-      <p><strong>Company Overview:</strong> FLEETCOR is a global payments and business services company. The Lodging Division provides workforce lodging solutions for clients across transportation, construction, and field services.</p>
-      <ul>
-        <li>Developed 3- and 5-year strategic growth plans in collaboration with division leadership.</li>
-        <li>Spearheaded a $2M IT initiative to overhaul the internal pricing and booking engine, targeting &lt;1-year payback.</li>
-        <li>Negotiated and launched partnerships to expand the offering to include Air and Car products.</li>
-        <li>Led research that drove pricing strategy enhancements and cross-departmental execution.</li>
-        <li>Served as interim Director of Pricing, implementing model changes that increased revenue capture.</li>
-      </ul>
-    </section>
+      <div class="experience-card" onclick="toggleCard(this)">
+        <h2>Harris Williams</h2>
+        <p>Associate, M&A (2018–2019)</p>
+        <div class="experience-details">
+          <p><strong>Overview:</strong> Middle-market investment bank.</p>
+          <ul>
+            <li>Led execution across multiple sell-side transactions.</li>
+            <li>Owned model builds, CIMs, Q&A, and buyer coordination.</li>
+          </ul>
+        </div>
+      </div>
 
-    <section>
-      <h2>Harris Williams (A subsidiary of PNC Bank, NYSE: PNC)</h2>
-      <h3>Associate – Mergers & Acquisitions | Jun 2018 – Aug 2019</h3>
-      <p><strong>Company Overview:</strong> Harris Williams is a leading investment bank focused on M&A advisory for middle-market companies, serving private equity and corporate clients across a range of industries.</p>
-      <ul>
-        <li>Led critical execution workstreams across sell-side M&A engagements, including financial modeling, due diligence, and creation of confidential information memorandums.</li>
-        <li>Interfaced directly with C-level executives to prepare pitch materials, management presentations, and process deliverables.</li>
-        <li>Managed deal execution from pitch to close for transactions such as a $40M EBITDA workforce solutions provider.</li>
-        <li>Orchestrated diligence between management teams and buyers, built virtual data rooms, and coordinated buyer Q&amp;A.</li>
-      </ul>
-    </section>
+      <div class="experience-card" onclick="toggleCard(this)">
+        <h2>KeyBanc Capital Markets</h2>
+        <p>Associate, M&A (2017–2018)</p>
+        <div class="experience-details">
+          <p><strong>Overview:</strong> Full-service investment bank for mid-market deals.</p>
+          <ul>
+            <li>Built LBO/DCFs, led diligence, refined CFO financials.</li>
+            <li>Negotiated NDAs and supported deal marketing.</li>
+          </ul>
+        </div>
+      </div>
 
-    <section>
-      <h2>KeyBanc Capital Markets (NYSE: KEY)</h2>
-      <h3>Associate – Mergers & Acquisitions | Jun 2017 – Jun 2018 (Full-time), Summer 2016 (Internship)</h3>
-      <p><strong>Company Overview:</strong> KeyBanc Capital Markets is the corporate and investment banking arm of KeyBank, providing M&A advisory, debt and equity capital markets, and structured finance solutions to middle-market companies.</p>
-      <ul>
-        <li>Built and analyzed detailed financial models for acquisition targets, including LBO, DCF, and public comps.</li>
-        <li>Delivered over a dozen pitch decks to prospective clients, collaborating closely with senior bankers and clients.</li>
-        <li>Supported the sell-side process for a $15M EBITDA precision components manufacturer, including diligence, buyer outreach, and negotiation of key terms.</li>
-        <li>Worked directly with CFOs to refine financial statement presentation and lead working capital analyses.</li>
-        <li>Reviewed and negotiated over 100 NDAs to ensure confidentiality during buy-side and sell-side processes.</li>
-      </ul>
-    </section>
+      <div class="experience-card" onclick="toggleCard(this)">
+        <h2>3P Equity Partners</h2>
+        <p>Senior Analyst (2013–2015)</p>
+        <div class="experience-details">
+          <p><strong>Overview:</strong> PE firm focused on lower-middle market manufacturing.</p>
+          <ul>
+            <li>Owned financial ops across fund entities and holdings.</li>
+            <li>Acted as interim CFO; conducted deal and portfolio diligence.</li>
+          </ul>
+        </div>
+      </div>
 
-    <section>
-      <h2>3P Equity Partners</h2>
-      <h3>Private Equity Senior Analyst | Nov 2013 – Jun 2015</h3>
-      <p><strong>Company Overview:</strong> 3P Equity Partners is a private equity firm focused on lower-middle market manufacturing businesses, managing ~$220M in assets under management across two funds.</p>
-      <ul>
-        <li>Managed all financial and accounting responsibilities across the firm and its funds, including financial statements, tax compliance, payroll, and investor reporting.</li>
-        <li>Led detailed financial modeling and scenario analysis for potential acquisitions and portfolio company support.</li>
-        <li>Recommended investment decisions to the committee after evaluating hundreds of CIMs and performing diligence.</li>
-        <li>Acted as interim CFO for a $3M EBITDA oil and gas services portfolio company, improving financial reporting and terminating underperforming executives.</li>
-        <li>Designed investor presentations and worked directly with due diligence advisors across multiple transactions.</li>
-      </ul>
-    </section>
+      <div class="experience-card" onclick="toggleCard(this)">
+        <h2>PwC</h2>
+        <p>Assurance Associate (2012–2013)</p>
+        <div class="experience-details">
+          <p><strong>Overview:</strong> Big Four audit work with tech clients (incl. Twitter).</p>
+          <ul>
+            <li>Led fieldwork; found material misstatements in audits.</li>
+            <li>Built Excel/VBA tools to cut hours in half.</li>
+          </ul>
+        </div>
+      </div>
 
-    <section>
-      <h2>PwC</h2>
-      <h3>3rd Year Associate – Assurance | Jan 2012 – Oct 2013</h3>
-      <p><strong>Company Overview:</strong> PwC is one of the “Big Four” accounting firms, providing audit, tax, and advisory services to global clients across industries.</p>
-      <ul>
-        <li>Led audit fieldwork and testing for large public tech clients, including Twitter during pre-IPO and post-IPO reporting cycles.</li>
-        <li>Identified material errors in high-risk audit areas such as equity compensation and lease accounting.</li>
-        <li>Developed a VBA-based automation tool that cut capital lease audit hours by 50%.</li>
-        <li>Designed and delivered training for new associates on advanced Excel techniques.</li>
-        <li>Supervised and reviewed junior staff, providing technical guidance and performance feedback.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Missionary Service – Brazil São Paulo North</h2>
-      <h3>Full-Time Volunteer Missionary | 2006 – 2008</h3>
-      <p><strong>Overview:</strong> Completed a two-year volunteer mission in São Paulo, Brazil, focused on teaching, leadership, and community engagement in a high-pressure, cross-cultural environment.</p>
-      <ul>
-        <li>Became fluent in Portuguese and developed strong interpersonal and cross-cultural communication skills.</li>
-        <li>Mentored and managed teams of 10–20 missionaries, leading training meetings and weekly planning sessions.</li>
-        <li>Developed a high level of discipline, adaptability, and resilience through full-time service in underserved areas.</li>
-        <li>Led group instruction, one-on-one mentorship, and logistical coordination across large territories.</li>
-      </ul>
-    </section>
-
+      <div class="experience-card" onclick="toggleCard(this)">
+        <h2>Missionary Service</h2>
+        <p>Volunteer | Brazil São Paulo North (2006–2008)</p>
+        <div class="experience-details">
+          <p><strong>Overview:</strong> Two-year cross-cultural service mission.</p>
+          <ul>
+            <li>Fluent in Portuguese; led training and team logistics.</li>
+            <li>Developed resilience and leadership in underserved areas.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </main>
+
+  <script>
+    function toggleCard(card) {
+      const activeCard = document.querySelector('.experience-card.active');
+      if (activeCard && activeCard !== card) {
+        activeCard.classList.remove('active');
+      }
+      card.classList.toggle('active');
+    }
+
+    window.addEventListener('click', (e) => {
+      const isCard = e.target.closest('.experience-card');
+      if (!isCard) {
+        document.querySelectorAll('.experience-card.active').forEach(card => card.classList.remove('active'));
+      }
+    });
+  </script>
 </body>
 </html>
